@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area{
+            font: italic 20pt Times;
+            background: rgb(26, 0, 128);
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="area"> <!--</div> onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()"-->
+        Interaja...
+    </div>
+    <script>
+        var a = window.document.getElementById("area") 
+        // colocando pra fora, o "a" pode ser acessado para as functions
+        // se a definição de variável estiver dentro de uma function, não funciona para as outras
+        // dá para disparar os eventos no JS, ao invés do html
+
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+
+        function clicar(){
+            a.style.background = 'red'
+            a.innerText = "Clicou!"
+        }
+        function entrar(){
+            a.innerText = "Entrou!"
+        }
+        function sair(){
+            a.innerText = "Saiu!"
+            a.style.background = 'rgb(26, 0, 128)'
+        }
+    </script>
+</body>
+</html>

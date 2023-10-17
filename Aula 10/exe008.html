@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+           background-color: rgb(215, 34, 128);
+           font: Normal 12pt Times;
+           color:beige;
+        }
+        input{
+            font: Normal 12pt Times;
+            width: 120pt;
+            margin-top: 10pt;
+        }
+        div#res{
+            font: Italic 12pt Times;
+            margin-top: 10pt;
+        }
+    </style>
+</head>
+<body>
+    <h1> Média de Notas </h1>
+    Nota 1: <input type="number" name="txtn1" id="txtn1">
+    <br/>
+    Nota 2: <input type="number" name="txtn2" id="txtn2">
+    <br/>
+    <input type="button" value="Média" onclick = "Média()">   
+    <div id = "res"> Resultado: </div>
+    <script>
+        function Média(){
+            var txtn1 = window.document.getElementById('txtn1')
+            var txtn2 = window.document.querySelector('input#txtn2')
+            var n1 = Number(txtn1.value)
+            var n2 = Number(txtn2.value)
+            var med = (n1+n2)/2
+            res.innerHTML = `Resultado:<br/>A média entre as notas ${n1} e ${n2} é ${med}.`
+            if (med >= 7){
+                res.innerHTML += '<br/>Você está <strong>aprovado</strong>. Parabéns!'
+            }else{
+                res.innerHTML += '</br>Você está <strong>reprovado</strong>. Precisa estudar mais!'
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background: rgb(95, 46, 169);
+            color: white;
+            font: normal 18pt Arial;
+        }
+
+    </style>
+</head>
+<body>
+    <h1> Iniciando os estudos com DOM </h1>
+    <p> Aqui vai o resultado </p>
+    <p> Aprendendo a usar o <strong>Dom</strong> em JavaScript.</strong></p>
+    <div id='msg'>Clique em mim</div>
+    <script>
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[1]
+        window.document.write('Está escrito assim: ' + p1.innerText + '<br/>')
+        p1.style.color = 'yellow'
+        corpo.style.background = 'rgb(146, 112, 177)'
+        document.write(p1.innerText + '<br/>')
+        document.write(p1.innerHTML + '<br/>')
+        var d = window.document.getElementById('msg')
+        document.write(d.innerText)
+        d.style.background = 'black'
+        d.innerText = 'Estou aguardando...'
+        /* Por Seletor:
+        se for <div class='msg'>
+            var d = window.document.querySelector('div.msg')
+        se for <div id=
+            var d = window.document.querySelector('div#msg')
+        */
+    </script>
+</body>
+</html>
