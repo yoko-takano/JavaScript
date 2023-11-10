@@ -1,12 +1,19 @@
-const idade = 2;
-const nome = "Lara";
-const sobrenome = "Ayumi";
-bacharel = false;
-dezAnosDepois = "12";
+nome = "Yoko";
+idade = 28;
+frase = `Meu nome é ${nome} e tenho ${idade} anos.`;
 
-const nomeCompleto = nome + sobrenome;
-const resultado = idade + dezAnosDepois;
-console.log(nomeCompleto);
-console.log(resultado);
-console.log(bacharel == 1);
+console.log(frase);
 
+function comParametro(param) {
+    console.log(param);
+}
+comParametro();
+
+// Exemplo de Arrow Function
+const somaNumerosPequenos = (num1, num2) => {
+    if (num1 > 10 || num2 > 10) {
+        return "somente números de 1 a 9";
+    } else {
+        return num1 + num2;
+    }
+}
