@@ -4,6 +4,7 @@ frase = `Meu nome é ${nome} e tenho ${idade} anos.`;
 
 console.log(frase);
 
+// Retorno "undefined"
 function comParametro(param) {
     console.log(param);
 }
